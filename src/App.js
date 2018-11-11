@@ -1,25 +1,51 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Header from "./components/Header"
 
 class App extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      currentScore: 0,
+      bestScore: 0,
+      imgOrder: [{
+        imgSrc: "https://i.imgur.com/UMJzRnFb.jpg",
+        clicked: false
+      },{
+        imgSrc: "https://i.imgur.com/UMJzRnFb.jpg",
+        clicked: false
+      },{
+        imgSrc: "https://i.imgur.com/UMJzRnFb.jpg",
+        clicked: false
+      },{
+        imgSrc: "https://i.imgur.com/UMJzRnFb.jpg",
+        clicked: false
+      },{
+        imgSrc: "https://i.imgur.com/UMJzRnFb.jpg",
+        clicked: false
+      },{
+        imgSrc: "https://i.imgur.com/UMJzRnFb.jpg",
+        clicked: false
+      },{
+        imgSrc: "https://i.imgur.com/UMJzRnFb.jpg",
+        clicked: false
+      },{
+        imgSrc: "https://i.imgur.com/UMJzRnFb.jpg",
+        clicked: false
+      },{
+        imgSrc: "https://i.imgur.com/UMJzRnFb.jpg",
+        clicked: false
+      }]
+    }
+  }
+  
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <Header 
+          currentScore={this.state.currentScore}
+          bestScore={this.state.bestScore}
+        />
+        <main className="container"><p>Hey</p></main>
       </div>
     );
   }
